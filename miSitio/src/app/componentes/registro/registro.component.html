@@ -1,0 +1,30 @@
+<section id="container">
+    <div class= "row col-lg-3 col-md-4 col-sm-8 col-10" id= "formulario">
+        <div class="col-md-12" >	
+            <h2 >Registro de Usuario</h2><hr>
+            <h5 class = "col-md-12">Tus datos</h5>
+            <div class = "row">
+                <div class = "col-md-12"><input class= "form-control" type="text" name="nombre" tabindex ="1" placeholder="Nombre completo"[(ngModel)]="nombre"></div>
+                <span id = "msjnombre" appColor>{{msjnombre}}<br></span>
+            </div>
+            <div class = "row">
+                <div class = "col-md-12"><input class= "form-control" id= "email" type="email" name="email" tabindex ="2" placeholder="Correo electrónico" [(ngModel)]= "email"></div>
+                <span id = "msjmail" appColor>{{msjmail}}<br></span>
+            </div>
+            <div class = "row">
+                <div class = "col-md-12"><input class= "form-control" id= "usuario" type="text" name="usuario" tabindex ="3" placeholder="Usuario" [(ngModel)]= "username"></div>
+                <span id = "msjus"  appColor>{{msjus}}<br></span>
+            </div>
+            <div class = "row">
+                <div class = "col-md-12"><input class= "form-control" id = "contraseña" type="password" name="clave" tabindex ="4" placeholder="Contraseña" [(ngModel)]= "password"></div>
+                <span id = "msjpas"  appColor>{{msjpas}}<br></span>
+            </div>
+            <div id ="botones">
+                <input id = "enviar" (click)=enviar() class = "btn btn-primary" type="button" value="Enviar" tabindex ="6">
+            </div>	
+            <div id = "enlace"><hr>
+                <p class = "link">Ya tienes cuenta? <a routerLink="/login">Ingresa aqui</a>! o continua como <a href="" >Invitado</a>!</p>
+            </div>
+        </div>
+    </div>
+</section>

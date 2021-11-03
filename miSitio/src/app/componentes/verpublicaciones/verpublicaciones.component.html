@@ -1,0 +1,8 @@
+<app-cebecera></app-cebecera>
+<div class="container">
+    <div class="row"> 
+        <div *ngFor="let publicacion of publicaciones">
+            <app-publicacion [publicacion] = "publicacion" ></app-publicacion>
+        </div>
+    </div>      
+</div>

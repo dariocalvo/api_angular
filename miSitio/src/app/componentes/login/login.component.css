@@ -1,0 +1,62 @@
+
+#container{
+    margin-top: 100pt;
+    height: 100%;
+    display:flex;  
+    flex-direction: column;
+    justify-content: center;
+}
+
+#formulario{
+    padding: 20px;
+    border-color: rgb(97, 108, 170);
+    border-style: solid; 
+    border-width: medium;
+    border-radius: 10px;
+    margin: 150px auto;
+    background-color: #b9c1c2;
+    font-size:12px; 
+    font-family:tahoma;
+    font-weight:bold;
+    text-align: center;
+    animation: fadein 1s;
+    opacity: 90%;
+}
+
+#formulario h2{
+    color:rgb(52, 87, 202);
+    font-weight: bold;
+    animation: fadein 2s;
+}
+
+#formulario p{
+    font-size: 11px;
+}
+
+  @keyframes fadein{
+         
+    0% { 
+        opacity: 20%; 
+        transform: scale(1%); 
+    }
+    100%  { 
+        opacity: 90%; 
+        transform: scale(100%);
+    }
+  }
+
+.btn:hover{
+    transform: scale(115%);
+}
+
+.row{
+   justify-content: center;
+   align-items: center;
+}
+
+.error{
+    color: red;
+    font-weight: bolder;
+    font-size: 14px;
+}
+

@@ -1,0 +1,21 @@
+<div class="header" >
+    <table>
+        <td style ="width: 50px"><img id = "logo" class="logo" src="../../../assets/logo.png" alt="Logo"></td>
+        <td id="sitio" style ="width: 400px"><h1>Sitio.com</h1></td>
+    </table>
+    <div class="optionsBar">
+        <span id="fecha">{{fecha|date:"EEEE d, MMMM y"}} </span>
+        <ul><span id= "usuario" >{{usuario}}</span>
+       <li><img class="photouser" id="photouser" alt="Usuario" title="Mi cuenta" src="../../../assets/user.png">
+                <ul id="menuUsuario">
+                    <li *ngIf="!logueado"><a routerLink= "/login">Iniciar Sesion</a></li>
+                    <li *ngIf="!logueado"><a routerLink= "/registro">Registrarse</a></li>
+                    <li *ngIf="logueado"><a routerLink= "">Administrar Cuenta</a></li>
+                    <li *ngIf="logueado"><a (click)="baja()"value="Darme de baja">Darme de baja</a></li>
+                    <li *ngIf="logueado"><a (click)="salir()"value="Cerrar Sesion">Cerrar Sesion</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<app-menu-principal [logueado] = "logueado"></app-menu-principal>

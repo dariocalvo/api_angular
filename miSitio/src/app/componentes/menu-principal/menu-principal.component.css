@@ -1,0 +1,73 @@
+nav{
+	margin-top: 45pt;
+    width: 100%;
+	position: fixed;
+}
+
+nav ul{
+	background: #058167;
+	list-style: none;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+nav ul > li a{
+	position: relative;
+}
+nav a{
+	color: #FFF;
+	display: block;
+	font-size: 12pt;
+    text-decoration: none;
+	padding: 10px 30px 10px 30px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: background .5s;
+	border-right: 1px solid #319B8F;
+}
+nav .principal > a{
+	/*background: url("../img/arrow_bottom.png") no-repeat;*/
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto auto;
+    background-position: 94% center;
+    background-size: 10px;
+    text-decoration: none;
+}
+
+nav a:hover{
+	color: rgb(209, 221, 103);
+	text-decoration: none;
+}	
+
+nav ul li:hover ul{
+	display: block;
+	opacity: 100%;
+	
+}
+nav li ul{
+	background: #2d9872;
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	align-items: flex-start;
+	border-radius: 0 0 20px 10px;
+}
+
+nav li ul a{
+	text-align: center;
+	position: relative;
+	border-right: initial;
+}
+nav li ul a:hover{
+	color: rgb(228, 243, 97);
+	font-weight: bolder;
+	opacity: 95%;
+	transform: scale(120%);
+
+		
+}
+nav li ul li:last-child{
+	border-radius: 0 0 10px 10px;
+	overflow: hidden;
+}

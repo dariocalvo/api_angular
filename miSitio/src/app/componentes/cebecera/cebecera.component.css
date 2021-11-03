@@ -1,0 +1,112 @@
+
+.header{
+	position:fixed; 
+	width: 100%;
+	z-index: 100;
+	color: #FFF;
+	background: #0a4661;
+	height: 45pt;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px;
+}
+
+#fecha{
+	color:lightblue;
+}
+
+#usuario{
+	margin-top: 12pt;
+	font-size: 22px;
+	font-weight: bolder;
+}
+
+.optionsBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.optionsBar span {
+    color: #FFF;
+    font-size: 11pt;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+
+.photouser {
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.logo{
+	margin-top: -15pt;
+	margin-left: 5pt;
+	width: 50px;
+	height: 50px; 
+}
+
+h1{
+	font-weight: bolder;
+	padding-top: 5pt;
+}
+
+/*******************************************************************/
+/*Menu de usuario*/
+/*******************************************************************/
+.optionsBar ul{
+	margin-right: 40pt;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.optionsBar ul > li a{
+	position: relative;
+}
+
+.optionsBar a{
+	color: #FFF;
+	display: flex;
+	font-size: 8pt;
+	padding: 10px 10px;
+	text-transform: uppercase;
+	letter-spacing: 0px;
+	transition: background .5s;
+	text-align: center;
+}
+
+.optionsBar h5{
+	text-align: center;
+}
+
+.optionsBar ul li:hover ul{
+	display: block;
+	z-index: 10;
+}
+.optionsBar li ul{
+	background: #0a4661;
+	display: none;
+	flex-direction: column;
+	position: absolute;
+	align-items: center;
+	border-radius: 0 0 10px 10px;
+}
+.optionsBar li ul a{
+    text-decoration: none;
+	position: relative;
+	padding: 15px 50px 30px 15px;
+	
+}
+.optionsBar li ul a:hover{
+	color: rgb(135, 228, 135);
+    font-weight: bolder;
+	transform: scale(130%);
+}
+.optionsBar li ul li:last-child{
+	border-radius: 0 0 10px 10px;
+	overflow: hidden;
+}

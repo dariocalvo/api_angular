@@ -1,0 +1,18 @@
+<div id="container">
+    <div id= "formulario">
+        <div class="col-md-12">
+            <h2 >Ingreso al sistema</h2><hr>	
+            <form>
+            <input class= "form-control" id= "usuario" type="text" name="nombre" tabindex ="1" placeholder="Usuario" [(ngModel)]= "usuario" ><br>
+            <input class= "form-control" id = "contraseña" type="password" name="clave" tabindex ="2" placeholder="Contraseña" [(ngModel)]= "password" >
+            <div><br><span appColor>{{mensaje_al_usuario}}</span><br><br></div>
+            <div id= 'botones'>
+                <input id = "enviar" class = "btn btn-primary" type="button" value="Ingresar" autocomplete= "current-password" tabindex ="3" (click)=ingresar()>
+            </div>
+            </form>
+            <div id = "enlace"><hr>
+                <p class = "link">No estas registrado? <a routerLink="/registro" >Registrate</a>! o continua como <a routerLink="/publicaciones/0" >Invitado</a>! </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="publicacion">
+    <div class="head_pub">
+        <div><h3 id ="usuario_pub">{{publicacion.username}}</h3></div>
+        <h2 id ="rubro_pub">{{publicacion.categoria}}</h2>
+    </div>
+    <div class="imagen_pub"><img id ="img_pub" src="{{publicacion.rutaImagen}}">
+        <div class="cuerpo_pub">
+            <h1 id="titulo_pub">{{publicacion.titulo}}</h1>
+            <span id ="texto_pub">{{publicacion.contenido}}</span>
+            <h1 id="pie_pub">{{publicacion.pie}}</h1>
+        </div>
+     </div>
+     <div class="foot_pub">
+        <span id="fecha_pub">{{publicacion.fecha}}</span>
+        <div id="iconos_pub">
+            <input type="button" value="Editar" *ngIf= "mostrar()" (click)= "editar()">
+            <input type="button" value="Eliminar" *ngIf= "mostrar()" (click)= "eliminar()">
+        </div>
+    </div>
+</div><br>

@@ -1,0 +1,21 @@
+<div class= "nav">
+    <nav id="Barra_nav">
+        <ul id = "MenuNav">
+            <li class="principal">
+              	<a>Publicaciones</a>
+                <ul id= "rubros" >
+                    <li>
+                        <a routerLink='/publicaciones/0'>Todas</a>
+                    </li>
+                    <li *ngFor= "let rubro of rubros">
+                        <a routerLink='/publicaciones/{{rubro.id_rubro}}'>{{rubro.categoria}}</a>
+                    </li>
+                </ul>
+            </li>
+            <li *ngIf="logueado">
+                <a routerLink='/publicaciones'>Crear Publicacion</a>
+            </li>
+		</ul>
+    </nav>
+</div>  
+<router-outlet></router-outlet>
