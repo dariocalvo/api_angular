@@ -10,8 +10,8 @@
                 <ul id="menuUsuario">
                     <li *ngIf="!logueado"><a routerLink= "/login">Iniciar Sesion</a></li>
                     <li *ngIf="!logueado"><a routerLink= "/registro">Registrarse</a></li>
-                    <li *ngIf="logueado"><a routerLink= "">Administrar Cuenta</a></li>
-                    <li *ngIf="logueado"><a (click)="baja()"value="Darme de baja">Darme de baja</a></li>
+                    <!--<li *ngIf="logueado"><a routerLink= "">Administrar Cuenta</a></li>-->
+                    <li *ngIf="logueado"><a (click)="baja()"value="Darme de baja">Borrar cuenta</a></li>
                     <li *ngIf="logueado"><a (click)="salir()"value="Cerrar Sesion">Cerrar Sesion</a></li>
                 </ul>
             </li>

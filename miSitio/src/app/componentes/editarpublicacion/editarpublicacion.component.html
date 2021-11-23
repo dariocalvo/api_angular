@@ -1,19 +1,23 @@
 <app-cebecera></app-cebecera>
-<div class="publicacion">
-    
-    <div class="head_pub">
-        <div><h3 id ="usuario_pub">EDITAR PUBLICACION</h3></div>
-        <h2 id ="rubro_pub">{{categoria}}</h2>
-    </div>
-    <div class="imagen_pub"><img id ="img_pub" src="">
-        <div class="cuerpo_pub">
-            <h1 id="titulo_pub"><input type="text" [(ngModel)] = "titulo"></h1>
-            <span id ="texto_pub"><textarea cols="50" rows="8" [(ngModel)] = "contenido"></textarea></span>
-            <h1 id="pie_pub"><input type="text" [(ngModel)] = "pie"></h1>
+<div class="col-10 offset-1">
+    <div class="publicacion">
+        <div class="head_pub">
+            <div><h3 id ="usuario_pub">EDITAR PUBLICACION</h3></div>
+            <h2 id ="rubro_pub">{{categoria}}</h2>
         </div>
-     </div>
-     <div class="foot_pub">
-        <input type="button" value="Confirmar" (click)= "guardar()">
-        <input type="button" value="Cancelar" (click)= "volver()">
-     </div>
-</div><br>
+        <div class="imagen_pub"><img id ="img_pub" src="">
+            <div class="cuerpo_pub">
+                <h1 id="titulo_pub"><input type="text" [(ngModel)] = "titulo"></h1>
+                <span id ="texto_pub"><textarea cols="50" rows="8" [(ngModel)] = "contenido"></textarea></span>
+                <h1 id="pie_pub"><input type="text" [(ngModel)] = "pie"></h1>
+            </div>
+        </div>
+        <div class="foot_pub">
+            <span></span>
+            <div id="iconos_pub">
+                <input type="button" value="Confirmar" (click)= "guardar()">
+                <input type="button" value="Cancelar" (click)= "volver()">
+            </div>    
+        </div>
+    </div>
+</div>

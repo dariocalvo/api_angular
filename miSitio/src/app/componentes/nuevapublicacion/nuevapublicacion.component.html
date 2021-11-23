@@ -1,0 +1,32 @@
+<app-cebecera></app-cebecera>
+<div class="col-10 offset-1">
+    <div class="publicacion">
+        
+        <div class="head_pub">
+            <div><h3>NUEVA PUBLICACION</h3></div>
+            <h2>Rubro:
+                <select id= "rubros" [(ngModel)]="id_rubro" (change) = "borrarMSJ()">
+                    <option *ngFor="let rubro of rubros" [ngValue]="rubro.id_rubro">{{rubro.categoria}} </option>
+                </select>
+            </h2>
+        </div>
+        <div class="imagen_pub"><img id ="img_pub" src="">
+            <div class="cuerpo_pub">
+                <h1 id="titulo_pub"><input type="text" [(ngModel)] = "titulo" placeholder= "Titulo de la publicación" (change) = "borrarMSJ()"></h1>
+                <span id ="texto_pub"><textarea cols="50" rows="8" [(ngModel)] = "contenido" placeholder= "Contenido de la publicación" (change) = "borrarMSJ()"></textarea></span>
+                <h1 id="pie_pub"><input type="text" [(ngModel)] = "pie" placeholder= "Pie de la publicación" (change) = "borrarMSJ()"></h1>
+            </div>
+        </div>
+        <div class="foot_pub">
+            <span></span>
+            <div id="iconos_pub">
+            <input type="button" value="Publicar" (click)= "enviar()">
+            <input type="button" value="Cancelar" (click)= "volver()">
+        </div>
+    </div>
+    <div>
+        <span id = "msj" appColor>{{msj}}</span>
+    </div>
+
+</div>
+

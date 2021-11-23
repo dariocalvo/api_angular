@@ -35,12 +35,13 @@ export class PublicacionComponent implements OnInit {
   }
 
   eliminar(){
+    
     if (this.confirmar()){
       this.ruta = "/Publicacion/Bloquear";
       this.datos.append("id_publicacion", this.publicacion.id_publicacion);
       this.datos.append("autorizacion", "3");
       this.api.traerPost(this.ruta, this.datos).subscribe(resp=> {return resp});  
-      this.router.navigate(["cabecera"]);
+      this.router.navigate(["exito"]);
     }
   }
   

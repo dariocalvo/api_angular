@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GuardsCheckStart } from '@angular/router';
+import { GuardsCheckStart, Router } from '@angular/router';
 import { Usuario } from 'src/app/clases/usuario';
 import { ApiService } from 'src/app/utilidades/api.service';
 import { UsuariosService } from 'src/app/utilidades/usuarios.service';
@@ -23,8 +23,10 @@ export class RegistroComponent implements OnInit {
   ruta!:string;
   datos= new FormData();
   existe!: any;
+  respuesta!:any;
 
-  constructor(private servicio: UsuariosService, private api: ApiService ) {
+  constructor(private servicio: UsuariosService, private router: Router, private api: ApiService ) {
+    
     this.nombre = "";
     this.username ="";
     this.email ="";
@@ -95,7 +97,9 @@ guardar(){
     this.datos.append("pass", this.servicio.Password);
     this.datos.append("avatar", "");
     this.ruta = "/Usuario/Nuevo";
-    this.api.traerPost(this.ruta, this.datos).subscribe(resp => alert (resp));
+    this.api.traerPost(this.ruta, this.datos).subscribe(resp => JSON.stringify(resp));
+    alert ('registro exitoso');
+    this.router.navigate(["login"]);
 }
 
 }

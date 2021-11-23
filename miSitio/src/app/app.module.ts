@@ -17,6 +17,8 @@ import { ColorDirective } from './color.directive';
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
 import { EditarpublicacionComponent } from './componentes/editarpublicacion/editarpublicacion.component';
+import { NuevapublicacionComponent } from './componentes/nuevapublicacion/nuevapublicacion.component';
+import { MensajeExitoComponent } from './componentes/mensaje-exito/mensaje-exito.component';
 registerLocaleData(localeEs, 'es');
 
 @NgModule({
@@ -32,6 +34,8 @@ registerLocaleData(localeEs, 'es');
     VerpublicacionesComponent,
     ColorDirective,
     EditarpublicacionComponent,
+    NuevapublicacionComponent,
+    MensajeExitoComponent,
   ],
   imports: [
     BrowserModule,

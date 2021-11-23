@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
       {
         if (resp){
           this.Logueado = <Array<Usuario>>resp;
-          this.guardarSesion(this.Logueado[0].username, this.Logueado[0].permiso);
+          this.guardarSesion(this.Logueado[0].username, this.Logueado[0].permiso, this.Logueado[0].id_usuario);
           this.agregarServicioUsuario(this.Logueado[0]);
         }else{
           this.mensaje_al_usuario = "Usuario o contraseña incorrectos";
@@ -46,9 +46,10 @@ export class LoginComponent implements OnInit {
       });
   }
 
-  guardarSesion(usuario:string, permiso:number){
+  guardarSesion(usuario:string, permiso:number, id:number){
     sessionStorage.setItem('usuario',usuario);
     sessionStorage.setItem('rol', permiso.toString());
+    sessionStorage.setItem('id', id.toString());
   }
 
   agregarServicioUsuario(Logueado:Usuario){
@@ -58,7 +59,6 @@ export class LoginComponent implements OnInit {
     this.ServicioUsuario.EMAIL = Logueado.email;
     this.ServicioUsuario.PERMISO = Logueado.permiso;
     this.router.navigateByUrl('publicaciones/0');
-    
   }
 
 }

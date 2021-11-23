@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GeneralComponent } from './general.component';
+import { MensajeExitoComponent } from './mensaje-exito.component';
 
-describe('GeneralComponent', () => {
-  let component: GeneralComponent;
-  let fixture: ComponentFixture<GeneralComponent>;
+describe('MensajeExitoComponent', () => {
+  let component: MensajeExitoComponent;
+  let fixture: ComponentFixture<MensajeExitoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GeneralComponent ]
+      declarations: [ MensajeExitoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GeneralComponent);
+    fixture = TestBed.createComponent(MensajeExitoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
