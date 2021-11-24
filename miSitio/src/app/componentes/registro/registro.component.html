@@ -4,19 +4,19 @@
             <h2 >Registro de Usuario</h2><hr>
             <h5 class = "col-md-12">Tus datos</h5>
             <div class = "row">
-                <div class = "col-md-12"><input class= "form-control" type="text" name="nombre" tabindex ="1" placeholder="Nombre completo"[(ngModel)]="nombre"></div>
+                <div class = "col-md-12"><input class= "form-control" type="text" name="nombre" tabindex ="1" placeholder="Nombre completo"[(ngModel)]="nombre" (change)=borrarMSJ(1)></div>
                 <span id = "msjnombre" appColor>{{msjnombre}}<br></span>
             </div>
             <div class = "row">
-                <div class = "col-md-12"><input class= "form-control" id= "email" type="email" name="email" tabindex ="2" placeholder="Correo electrónico" [(ngModel)]= "email"></div>
+                <div class = "col-md-12"><input class= "form-control" id= "email" type="email" name="email" tabindex ="2" placeholder="Correo electrónico" [(ngModel)]= "email" (change)=borrarMSJ(2)></div>
                 <span id = "msjmail" appColor>{{msjmail}}<br></span>
             </div>
             <div class = "row">
-                <div class = "col-md-12"><input class= "form-control" id= "usuario" type="text" name="usuario" tabindex ="3" placeholder="Usuario" [(ngModel)]= "username"></div>
+                <div class = "col-md-12"><input class= "form-control" id= "usuario" type="text" name="usuario" tabindex ="3" placeholder="Usuario" [(ngModel)]= "username" (change)=comprobarUsuario()></div>
                 <span id = "msjus"  appColor>{{msjus}}<br></span>
             </div>
             <div class = "row">
-                <div class = "col-md-12"><input class= "form-control" id = "contraseña" type="password" name="clave" tabindex ="4" placeholder="Contraseña" [(ngModel)]= "password"></div>
+                <div class = "col-md-12"><input class= "form-control" id = "contraseña" type="password" name="clave" tabindex ="4" placeholder="Contraseña" [(ngModel)]= "password" (change)=borrarMSJ(3)></div>
                 <span id = "msjpas"  appColor>{{msjpas}}<br></span>
             </div><br>
             <div id ="botones">

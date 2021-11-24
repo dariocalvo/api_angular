@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ValidadorGuard implements CanActivate {
+
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
@@ -13,7 +14,7 @@ export class ValidadorGuard implements CanActivate {
         return false;
       }else{
         return true;
-      }
+      } 
     }
     
 }

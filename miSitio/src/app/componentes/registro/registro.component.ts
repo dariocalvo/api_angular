@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GuardsCheckStart, Router } from '@angular/router';
-import { Usuario } from 'src/app/clases/usuario';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/utilidades/api.service';
 import { UsuariosService } from 'src/app/utilidades/usuarios.service';
 
@@ -24,6 +23,7 @@ export class RegistroComponent implements OnInit {
   datos= new FormData();
   existe!: any;
   respuesta!:any;
+  usuarioDisponible: boolean = false;
 
   constructor(private servicio: UsuariosService, private router: Router, private api: ApiService ) {
     
@@ -49,19 +49,54 @@ comprobar(valor:any):Boolean{
   }
 }
 
+borrarMSJ(control:number){
+  switch (control){
+    case 1:
+      this.msjnombre="";
+      break;
+    case 2:
+      this.msjmail="";
+      break;
+    case 3:
+      this.msjpas="";
+      break;
+  }
+}
+
+comprobarUsuario(){
+  this.datos.append("usuario", this.username);
+  this.ruta = "/Usuario/Buscar";
+  this.api.traerPost(this.ruta, this.datos).subscribe(resp => 
+    {
+      if (resp){
+        this.msjus = 'Usuario existente, debes elejir otro nombre';
+        this.usuarioDisponible= false;
+      }else{
+        this.msjus = '';
+        this.usuarioDisponible= true;
+      }
+    });
+    
+}
+
 enviar(){
   this.ok = 0;
   if (this.comprobar(this.nombre)){
     this.msjnombre ="";
   }else{
-    this.msjnombre ="el nombre no es valido";
+    this.msjnombre ="El nombre no es válido";
     this.ok++;
   }
   
   if (this.comprobar(this.username)){
-    this.msjus ="";
+    if (this.usuarioDisponible){
+      this.msjus ="";
+    }else{
+      this.ok++;  
+    }
+    
   }else{
-    this.msjus ="el usuario no es valido";
+    this.msjus ="El usuario no puede estar vacío";
     this.ok++;
   }
   
