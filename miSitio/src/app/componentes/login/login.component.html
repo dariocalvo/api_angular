@@ -3,8 +3,8 @@
         <div class="col-md-12">
             <h2 >Ingreso al sistema</h2><hr>	
             <form>
-            <input class= "form-control" id= "usuario" type="text" name="nombre" tabindex ="1" placeholder="Usuario" [(ngModel)]= "usuario" ><br>
-            <input class= "form-control" id = "contraseña" type="password" name="clave" tabindex ="2" placeholder="Contraseña" [(ngModel)]= "password" >
+            <input class= "form-control" id= "usuario" type="text" name="nombre" tabindex ="1" placeholder="Usuario" [(ngModel)]= "usuario" (change) = "borrarMSJ()"><br>
+            <input class= "form-control" id = "contraseña" type="password" name="clave" tabindex ="2" placeholder="Contraseña" [(ngModel)]= "password" (change) = "borrarMSJ()">
             <div><br><span appColor>{{mensaje_al_usuario}}</span><br><br></div>
             <div id= 'botones'>
                 <input id = "enviar" class = "btn btn-primary" type="button" value="Ingresar" autocomplete= "current-password" tabindex ="3" (click)=ingresar()>

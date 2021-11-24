@@ -12,6 +12,7 @@ import { PublicacionesService } from 'src/app/utilidades/publicaciones.service';
 export class VerpublicacionesComponent implements OnInit {
   
   publicaciones!:Array<Publicacion>;
+  filtro!:string; 
   ruta!:string;
   data= new FormData();
   

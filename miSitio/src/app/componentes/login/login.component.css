@@ -60,3 +60,18 @@
     font-size: 14px;
 }
 
+.efecto{
+  color:red;
+  font-weight: bolder;
+  font-size: 14px;
+  animation-name: parpadeo;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes parpadeo {  
+  0% { opacity: 1.0; }
+   50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}

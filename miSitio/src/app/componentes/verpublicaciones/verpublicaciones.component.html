@@ -1,7 +1,11 @@
 <app-cebecera></app-cebecera>
 <div class="container">
+    <div class="col-12">
+        Filtar publicaciones por Usuario: <input type="text" [(ngModel)]= "filtro">
+    </div>
+        
     <div class="row"> 
-        <div *ngFor="let publicacion of publicaciones">
+        <div *ngFor="let publicacion of publicaciones | filtroPublicacion:filtro">
             <app-publicacion [publicacion] = "publicacion" ></app-publicacion>
         </div>
     </div>      

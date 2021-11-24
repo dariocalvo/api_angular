@@ -65,7 +65,8 @@ enviar(){
     this.ok++;
   }
   
-  if (this.comprobar(this.email)){
+  if (this.email.match(/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/))
+  /*if (this.comprobar(this.email))*/{
     this.msjmail ="";
   }else{
     this.msjmail ="La direccion de correo no es válida";
@@ -78,7 +79,6 @@ enviar(){
     this.msjpas ="La contraseña no puede quedar vacia";
     this.ok++;
   }
-
 
 
   if (this.ok == 0){

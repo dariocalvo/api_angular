@@ -19,6 +19,7 @@ import { registerLocaleData } from '@angular/common';
 import { EditarpublicacionComponent } from './componentes/editarpublicacion/editarpublicacion.component';
 import { NuevapublicacionComponent } from './componentes/nuevapublicacion/nuevapublicacion.component';
 import { MensajeExitoComponent } from './componentes/mensaje-exito/mensaje-exito.component';
+import { FiltroPublicacionPipe } from './filtro-publicacion.pipe';
 registerLocaleData(localeEs, 'es');
 
 @NgModule({
@@ -36,6 +37,7 @@ registerLocaleData(localeEs, 'es');
     EditarpublicacionComponent,
     NuevapublicacionComponent,
     MensajeExitoComponent,
+    FiltroPublicacionPipe,
   ],
   imports: [
     BrowserModule,

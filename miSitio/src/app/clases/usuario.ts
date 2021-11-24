@@ -76,14 +76,4 @@ public set REGISTRO(v : Date) {
     this.activo = 0;
     this.fecha_registro = new Date;
   }
-
-
-
-
-
-
-
-
-
-
 }

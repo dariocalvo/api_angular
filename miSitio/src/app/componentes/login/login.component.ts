@@ -30,6 +30,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   
+  borrarMSJ(){
+    this.mensaje_al_usuario ="";
+  }
+
+
   ingresar(){
     this.datos.append("usuario", this.usuario);
     this.datos.append("pass", this.password);

@@ -1,7 +1,6 @@
 <app-cebecera></app-cebecera>
 <div class="col-10 offset-1">
     <div class="publicacion">
-        
         <div class="head_pub">
             <div><h3>NUEVA PUBLICACION</h3></div>
             <h2>Rubro:
@@ -20,13 +19,12 @@
         <div class="foot_pub">
             <span></span>
             <div id="iconos_pub">
-            <input type="button" value="Publicar" (click)= "enviar()">
-            <input type="button" value="Cancelar" (click)= "volver()">
+                <input type="button" value="Publicar" (click)= "enviar()">
+                <input type="button" value="Cancelar" (click)= "volver()">
+            </div>
         </div>
     </div>
-    <div>
+    <div class="mensaje">
         <span id = "msj" appColor>{{msj}}</span>
     </div>
-
 </div>
-
