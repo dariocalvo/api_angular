@@ -15,8 +15,10 @@ export class VerpublicacionesComponent implements OnInit {
   filtro!:string; 
   ruta!:string;
   data= new FormData();
+  orden!: number;
   
   constructor(private rutaActiva: ActivatedRoute, private api:ApiService) { 
+    this.orden = 1;
   }
 
   ngOnInit(): void {

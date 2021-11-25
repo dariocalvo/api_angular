@@ -20,6 +20,7 @@ import { EditarpublicacionComponent } from './componentes/editarpublicacion/edit
 import { NuevapublicacionComponent } from './componentes/nuevapublicacion/nuevapublicacion.component';
 import { MensajeExitoComponent } from './componentes/mensaje-exito/mensaje-exito.component';
 import { FiltroPublicacionPipe } from './filtro-publicacion.pipe';
+import { OrdenPublicacionesPipe } from './orden-publicaciones.pipe';
 registerLocaleData(localeEs, 'es');
 
 @NgModule({
@@ -38,6 +39,7 @@ registerLocaleData(localeEs, 'es');
     NuevapublicacionComponent,
     MensajeExitoComponent,
     FiltroPublicacionPipe,
+    OrdenPublicacionesPipe,
   ],
   imports: [
     BrowserModule,
